@@ -7,15 +7,14 @@
  */
 public class GroundTransportation extends Transport
 {
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
+    
     private String licensePlate;
     private static final double FEES = 3.0;
     /**
      * Construtor para objetos da classe GroundTransportation
      */
-    public GroundTransportation()
-    {
-        // inicializa variáveis de instância
+    public GroundTransportation(String licensePlate){
+        this.licensePlate = licensePlate;
         
     }
 
@@ -25,9 +24,13 @@ public class GroundTransportation extends Transport
      * @param  y   um exemplo de um parâmetro de método
      * @return     a soma de x e y 
      */
-    public int sampleMethod(int y)
+    public String getLicensePlate()
     {
-        // escreva seu código aqui
-        return x + y;
+        return licensePlate;
+    }
+    public void setLicensePlate(String licensePlate){
+        if (licensePlate != null)
+        this.licensePlate = licensePlate;
+        
     }
 }

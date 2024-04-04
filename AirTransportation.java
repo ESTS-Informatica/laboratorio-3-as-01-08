@@ -9,17 +9,17 @@ public class AirTransportation extends Transport
 {
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     private String name;
-    private int numberofContainers;
+    private int numberOfContainers;
     private static final double FEES = 4.0;
     
 
     /**
      * Construtor para objetos da classe AirTransportation
      */
-    public AirTransportation()
+    public AirTransportation(String name, int numberOfContainers)
     {
-        // inicializa variáveis de instância
-        x = 0;
+        this.name = name;
+        this.numberOfContainers = numberOfContainers;
     }
 
     /**
@@ -28,9 +28,21 @@ public class AirTransportation extends Transport
      * @param  y   um exemplo de um parâmetro de método
      * @return     a soma de x e y 
      */
-    public int sampleMethod(int y)
+    public String getName()
     {
-        // escreva seu código aqui
-        return x + y;
+        return name;
+    }
+    public int getNumberOfContainers()
+    {
+        return numberOfContainers;
+    }
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+    public void setNumberOfContainers(int numberOfContainers)
+    {
+        if(numberOfContainers >= 0)
+        this.numberOfContainers = numberOfContainers;
     }
 }
