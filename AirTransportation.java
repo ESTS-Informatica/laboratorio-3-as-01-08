@@ -45,4 +45,16 @@ public class AirTransportation extends Transport
         if(numberOfContainers >= 0)
         this.numberOfContainers = numberOfContainers;
     }
+    public String getTransportType(){
+        return "Transporte Aéreo";
+    }
+    @Override
+    public String toString(){
+        final StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append(String.format("%s: %s\n", "Nome", name));
+        sb.append(String.format("%s: %s\n", "Número de Contentores", numberOfContainers));
+        
+        return sb.toString();
+    }
 }
